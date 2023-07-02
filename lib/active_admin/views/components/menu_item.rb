@@ -11,6 +11,8 @@ module ActiveAdmin
 
       def build(item, options = {})
         super(options.merge(id: item.id))
+        # pp item
+        # puts helpers.render_in_context self, item.url
         @label = helpers.render_in_context self, item.label
         @url = helpers.render_in_context self, item.url
         @priority = item.priority
