@@ -57,6 +57,7 @@ inject_into_file "config/environments/test.rb", after: "  config.action_mailer.d
   "\n  config.assets.precompile += %w( some-random-css.css some-random-js.js a/favicon.ico )\n"
 end
 
+# FIXME: this conflicts with dev-app setup
 gsub_file "config/boot.rb", /^.*BUNDLE_GEMFILE.*$/, <<-RUBY
   ENV['BUNDLE_GEMFILE'] = "#{File.expand_path(ENV['BUNDLE_GEMFILE'])}"
 RUBY
