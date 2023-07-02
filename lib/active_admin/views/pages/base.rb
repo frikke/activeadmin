@@ -93,7 +93,10 @@ module ActiveAdmin
           div class: "flashes" do
             flash_messages.each do |type, messages|
               [*messages].each do |message|
-                div message, class: "flash flash_#{type}"
+                div class: "flash flash_#{type}" do
+                  # text_node svg_info_circle(class: "w-6 h-6 text-gray-800 dark:text-white")
+                  text_node message
+                end
               end
             end
           end
