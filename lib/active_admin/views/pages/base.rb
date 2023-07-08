@@ -6,6 +6,7 @@ module ActiveAdmin
 
         def build(*args)
           set_attribute :lang, I18n.locale
+          set_attribute :dir, :ltr
           build_active_admin_head
           build_page
         end
