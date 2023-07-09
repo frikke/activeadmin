@@ -1,5 +1,5 @@
 let onDOMReady = () =>
-  $('#active_admin_content .tabs').tabs()
+  $('.page-content-container .tabs').tabs()
 
 $(document).
   ready(onDOMReady).

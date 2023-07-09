@@ -5,14 +5,14 @@ end
 
 Then("I should see tabs:") do |table|
   table.rows.each do |title, _|
-    step %{I should see "#{title}" within "#main_content .tabs .nav"}
+    step %{I should see "#{title}" within ".page-content-container .tabs .nav"}
   end
 end
 
 Then("I should see tab content {string}") do |string|
-  step %{I should see "#{string}" within "#main_content .tabs .tab-content"}
+  step %{I should see "#{string}" within ".page-content-container .tabs .tab-content"}
 end
 
 Then("I should not see tab content {string}") do |string|
-  step %{I should not see "#{string}" within "#main_content .tabs .tab-content"}
+  step %{I should not see "#{string}" within ".page-content-container .tabs .tab-content"}
 end

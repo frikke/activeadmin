@@ -509,7 +509,7 @@
   }(CheckboxToggler);
   $.widget.bridge("tableCheckboxToggler", TableCheckboxToggler);
   var onDOMReady = function onDOMReady() {
-    return $("#active_admin_content .tabs").tabs();
+    return $(".page-content-container .tabs").tabs();
   };
   $(document).ready(onDOMReady).on("page:load turbolinks:load", onDOMReady);
   function modal_dialog(message, inputs, callback) {
