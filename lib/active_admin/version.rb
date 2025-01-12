@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 module ActiveAdmin
-  VERSION = "2.14.0"
+  VERSION = "4.0.0.beta15"
 end

@@ -1,6 +1,46 @@
 # Changelog
 
-## Unreleased
+[Future changelogs have moved to GitHub Releases](https://github.com/activeadmin/activeadmin/releases)
+
+## 3.2.0 [☰](https://github.com/activeadmin/activeadmin/compare/v3.1.0..v3.2.0)
+
+### Security Fixes
+
+* Backport protect against CSV Injection. [#8167] by [@mgrunberg]
+
+### Enhancements
+
+* Backport support citext column type in string filter. [#8165] by [@mgrunberg]
+* Backport provide detail in DB statement timeout error for filters. [#8163] by [@mgrunberg]
+
+### Bug Fixes
+
+* Backport make sure menu creation does not modify menu options. [#8166] by [@mgrunberg]
+* Backport ransack error with filters when ActiveStorage is used. [#8164] by [@mgrunberg]
+
+## 3.1.0 [☰](https://github.com/activeadmin/activeadmin/compare/v3.0.0..v3.1.0)
+
+### Enhancements
+
+* Support Rails 7.1. [#8102] by [@mgrunberg]
+* Remove deprecated usage of ActiveSupport::Deprecation singleton. [#8106] by [@mgrunberg]
+* Replace to_formatted_s with to_s to convert date to string. [#8105] by [@mgrunberg]
+* Remove upper bound dependency limits from gemspec. [#8098] by [@javierjulio]
+
+## 3.0.0 [☰](https://github.com/activeadmin/activeadmin/compare/v2.14.0..v3.0.0)
+
+### Breaking Changes
+
+* Remove custom Ransack predicates that were MetaSearch backports. [#8010] by [@javierjulio]
+* Require Ransack v4. [#8009] by [@javierjulio]
+
+### Enhancements
+
+* Use display name fallback if blank display name result. [#6342] by [@javierjulio]
+
+### Translation Improvements
+
+* Improve Swedish translations. [#7993] by [@carlottostromstedt]
 
 ## 2.14.0 [☰](https://github.com/activeadmin/activeadmin/compare/v2.13.1..v2.14.0)
 
@@ -411,7 +451,7 @@ _No changes_.
 * Fixed `if:` scope option when a lambda is passed. [#5501] by [@deivid-rodriguez]
 * Comment validation adding redundant errors when resource is missing. [#5517] by [@deivid-rodriguez]
 * Fixed resource filtering by association when the resource has custom primary key. [#5446] by [@wasifhossain]
-* Fixed "create anoter" checkbox styling. [#5324] by [@faucct]
+* Fixed "create another" checkbox styling. [#5324] by [@faucct]
 
 ## 1.3.1 [☰](https://github.com/activeadmin/activeadmin/compare/v1.3.0..v1.3.1)
 
@@ -571,7 +611,7 @@ _No changes_.
 
 * Prevents access to formats that the user not permitted to see. [#4867] by [@Fivell] and [@timoschilling]
 * Prevents potential DOS attack via Ruby symbols. [#1926] by [@seanlinsley]
-  * [this isn't an issue for those using Ruby >= 2.2](http://rubykaigi.org/2014/presentation/S-NarihiroNakamura)
+  * [this isn't an issue for those using Ruby >= 2.2](https://rubykaigi.org/2014/presentation/S-NarihiroNakamura)
 
 ### Bug Fixes
 
@@ -784,6 +824,7 @@ Please check [0-6-stable] for previous changes.
 [#6315]: https://github.com/activeadmin/activeadmin/pull/6315
 [#6318]: https://github.com/activeadmin/activeadmin/pull/6318
 [#6341]: https://github.com/activeadmin/activeadmin/pull/6341
+[#6342]: https://github.com/activeadmin/activeadmin/pull/6342
 [#6368]: https://github.com/activeadmin/activeadmin/pull/6368
 [#6393]: https://github.com/activeadmin/activeadmin/pull/6393
 [#6422]: https://github.com/activeadmin/activeadmin/pull/6422
@@ -845,6 +886,14 @@ Please check [0-6-stable] for previous changes.
 [#7984]: https://github.com/activeadmin/activeadmin/pull/7984
 [#7985]: https://github.com/activeadmin/activeadmin/pull/7985
 [#7986]: https://github.com/activeadmin/activeadmin/pull/7986
+[#7993]: https://github.com/activeadmin/activeadmin/pull/7993
+[#8009]: https://github.com/activeadmin/activeadmin/pull/8009
+[#8010]: https://github.com/activeadmin/activeadmin/pull/8010
+[#8098]: https://github.com/activeadmin/activeadmin/pull/8098
+[#8102]: https://github.com/activeadmin/activeadmin/pull/8102
+[#8105]: https://github.com/activeadmin/activeadmin/pull/8105
+[#8106]: https://github.com/activeadmin/activeadmin/pull/8106
+
 
 [@1000ship]: https://github.com/1000ship
 [@5t111111]: https://github.com/5t111111
@@ -865,6 +914,7 @@ Please check [0-6-stable] for previous changes.
 [@brunoarueira]: https://github.com/brunoarueira
 [@brunvez]: https://github.com/brunvez
 [@buren]: https://github.com/buren
+[@carlottostromstedt]: https://github.com/carlottostromstedt
 [@chancancode]: https://github.com/chancancode
 [@chrp]: https://github.com/chrp
 [@chumakoff]: https://github.com/chumakoff
